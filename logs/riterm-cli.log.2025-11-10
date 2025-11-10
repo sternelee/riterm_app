@@ -1,0 +1,968 @@
+2025-11-10T14:44:58.926243Z  INFO cli: Starting RiTerm Host Server
+2025-11-10T14:44:58.926466Z  INFO cli: 🔑 Using default secret key in CLI directory: "/Users/sternelee/www/github/riterm/riterm_secret_key"
+2025-11-10T14:44:58.926524Z  INFO cli::message_server: Initializing CLI message server...
+2025-11-10T14:44:58.926596Z  INFO cli::message_server: 🐚 Detected shell: Zsh at /bin/zsh
+2025-11-10T14:44:58.926759Z  INFO riterm_shared::event_manager: Initializing communication manager for node: riterm_cli_host
+2025-11-10T14:44:58.926774Z  INFO riterm_shared::event_manager: Starting event manager loop
+2025-11-10T14:44:58.926971Z  INFO riterm_shared::event_manager: Communication manager initialized successfully
+2025-11-10T14:44:58.927007Z  INFO riterm_shared::quic_server: Initializing QUIC message server...
+2025-11-10T14:44:58.927168Z  INFO riterm_shared::quic_server: Generating new secret key and saving to: "/Users/sternelee/www/github/riterm/riterm_secret_key"
+2025-11-10T14:44:58.927195Z DEBUG riterm_shared::event_manager: Message processing loop started for node: riterm_cli_host
+2025-11-10T14:44:58.927995Z  INFO riterm_shared::quic_server: ✅ Generated and saved new secret key
+2025-11-10T14:44:58.928054Z  INFO riterm_shared::quic_server: Using default relay
+2025-11-10T14:44:58.936439Z DEBUG ep{me=03e4a90ed1}: iroh::magicsock: binding addr=0.0.0.0:0
+2025-11-10T14:44:58.936511Z DEBUG ep{me=03e4a90ed1}:portmapper.service: portmapper: portmap starting
+2025-11-10T14:44:58.936894Z DEBUG ep{me=03e4a90ed1}: iroh::magicsock: successfully bound addr=0.0.0.0:0 local_addr=0.0.0.0:49655
+2025-11-10T14:44:58.936934Z DEBUG ep{me=03e4a90ed1}: iroh::magicsock: binding addr=[::]:49656
+2025-11-10T14:44:58.936978Z DEBUG ep{me=03e4a90ed1}: iroh::magicsock: successfully bound addr=[::]:49656 local_addr=[::]:49656
+2025-11-10T14:44:58.938459Z DEBUG ep{me=03e4a90ed1}:portmapper.service: portmapper: getting a port mapping for 192.168.6.166:49655 -> None
+2025-11-10T14:44:58.939391Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: sending broadcast request to: 239.255.255.250:1900 on interface: Ok(0.0.0.0:53870)
+2025-11-10T14:44:58.956796Z DEBUG ep{me=03e4a90ed1}: iroh::magicsock: scheduling periodic_stun to run immediately and in 21s
+2025-11-10T14:44:58.957083Z DEBUG ep{me=03e4a90ed1}: iroh::_events::direct_addrs: addrs={DirectAddr { addr: 10.144.247.119:49655, typ: Local }, DirectAddr { addr: 192.168.6.166:49655, typ: Local }, DirectAddr { addr: 192.168.139.3:49655, typ: Local }, DirectAddr { addr: 192.168.215.0:49655, typ: Local }}
+2025-11-10T14:44:58.957327Z DEBUG ep{me=03e4a90ed1}: iroh::endpoint: iroh Endpoint created version="0.93.2"
+2025-11-10T14:44:58.957444Z  INFO riterm_shared::quic_server: QUIC server node ID: PublicKey(03e4a90ed1ca90a58de6442419e707ff2c59aa55faeec5f2e621470ab55e1ee0)
+2025-11-10T14:44:58.957513Z  INFO riterm_shared::quic_server: Waiting for endpoint to be ready...
+2025-11-10T14:44:58.957787Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: starting direct addr update (Periodic)
+2025-11-10T14:44:58.957823Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: requesting net_report report
+2025-11-10T14:44:58.957981Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: net_report starting do_full=true
+2025-11-10T14:44:58.958150Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: spawning QAD probes
+2025-11-10T14:44:58.958230Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:44:58.958307Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:44:58.958369Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:44:58.958417Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:44:58.958456Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:44:58.958517Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:44:58.958507Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportstate actor starting
+2025-11-10T14:44:58.958631Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: local interface details if_state=IfStateDetails { have_v4: true, have_v6: true }
+2025-11-10T14:44:58.959083Z DEBUG ep{me=03e4a90ed1}:portmapper.service: portmapper: getting a port mapping for 192.168.6.166:49655 -> None
+2025-11-10T14:44:58.959221Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: sending broadcast request to: 239.255.255.250:1900 on interface: Ok(0.0.0.0:56058)
+2025-11-10T14:44:58.959856Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: use1-1.relay.n0.iroh-canary.iroh.link. A
+2025-11-10T14:44:58.959863Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: euc1-1.relay.n0.iroh-canary.iroh.link. A
+2025-11-10T14:44:58.959862Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: euc1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:58.959846Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: use1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:58.959861Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:58.959942Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:58.959871Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. A
+2025-11-10T14:44:58.959916Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:58.959953Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:58.960017Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:58.959970Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:58.960065Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:58.960093Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: reconnecting: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:58.960346Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:58.960401Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:58.960425Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:58.960476Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 31253:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:58.960469Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:58.960521Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 47848:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN A
+
+2025-11-10T14:44:58.960525Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:58.960575Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:58.960589Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 13383:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:58.960600Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:58.960610Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:58.960625Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:58.960658Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:58.960654Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 27835:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN A
+
+2025-11-10T14:44:58.960709Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:58.960750Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:58.960761Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:58.960814Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:58.960817Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 4650:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+
+2025-11-10T14:44:58.960839Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:58.960880Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:58.960900Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 26581:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:58.960969Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.006999Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_client_stream: received message id: 47848
+2025-11-10T14:44:59.007131Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 47848:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 178.156.197.190
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.007241Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 47848:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 178.156.197.190
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.007423Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=178.156.197.190:7842 relay_addr=[fd15:70a:510b:1::1]:12345
+2025-11-10T14:44:59.008066Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.008098Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.013813Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: received broadcast response from: 192.168.6.1:1900
+2025-11-10T14:44:59.013921Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: handling broadcast response from: 192.168.6.1:1900
+2025-11-10T14:44:59.014245Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: requesting control url from: http://192.168.6.1:5000/rootDesc.xml
+2025-11-10T14:44:59.014927Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connecting to 192.168.6.1:5000
+2025-11-10T14:44:59.018538Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connected to 192.168.6.1:5000
+2025-11-10T14:44:59.026450Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: handling control response from: 192.168.6.1:5000
+2025-11-10T14:44:59.027808Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: requesting control schema from: http://192.168.6.1:5000/WANIPCn.xml
+2025-11-10T14:44:59.027895Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connecting to 192.168.6.1:5000
+2025-11-10T14:44:59.028289Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_client_stream: received message id: 27835
+2025-11-10T14:44:59.028343Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 27835:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 162.55.211.167
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.028434Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 27835:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 162.55.211.167
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.028587Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=162.55.211.167:7842 relay_addr=[fd15:70a:510b:1::2]:12345
+2025-11-10T14:44:59.028720Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("euc1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.028747Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.030823Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connected to 192.168.6.1:5000
+2025-11-10T14:44:59.036567Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: igd_next::aio::tokio: handling schema response from: 192.168.6.1:5000
+2025-11-10T14:44:59.041172Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connecting to 192.168.6.1:5000
+2025-11-10T14:44:59.044707Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connected to 192.168.6.1:5000
+2025-11-10T14:44:59.049846Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connecting to 192.168.6.1:5000
+2025-11-10T14:44:59.053212Z DEBUG ep{me=03e4a90ed1}:portmapper.service:upnp: hyper_util::client::legacy::connect::http: connected to 192.168.6.1:5000
+2025-11-10T14:44:59.077937Z DEBUG ep{me=03e4a90ed1}:portmapper.service: portmapper::current_mapping: new port mapping Some(Upnp(Mapping { protocol: UDP, gateway: http://192.168.6.1:5000/ctl/IPConn, external_ip: 192.168.1.2, external_port: 46037 }))
+2025-11-10T14:44:59.078096Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: external address updated: Some(192.168.1.2:46037)
+2025-11-10T14:44:59.126562Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: use1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.126704Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.126819Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.126882Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.127152Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 51876:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.127402Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.147877Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. A
+2025-11-10T14:44:59.148094Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.148227Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.148304Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.148534Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 61395:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+
+2025-11-10T14:44:59.148837Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.153825Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.154033Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.154184Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.154265Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.154497Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 3073:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.154808Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.160334Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.160477Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.160334Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.162381Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: use1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.162408Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. A
+2025-11-10T14:44:59.162557Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.162557Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.162632Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: euc1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.162714Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.162724Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.162808Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.162838Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.162912Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.162963Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.163129Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.163160Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.163217Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.163390Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.163393Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_proto::xfer::dns_handle: querying: use1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.163464Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.163535Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.163658Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.163666Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 24976:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+
+2025-11-10T14:44:59.163733Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.163787Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 25724:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.163906Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 52963:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.164046Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 14254:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.164106Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.164127Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.164295Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.164141Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 37412:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.164705Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.164797Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.198390Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: euc1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.198596Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.198735Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.198805Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.199026Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 44194:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.199333Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.229908Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. A
+2025-11-10T14:44:59.230114Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.230319Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.230435Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.230671Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 64967:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+
+2025-11-10T14:44:59.230939Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.253428Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=0}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.253626Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=0}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.255179Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=0}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 001458b2733f5fe78535e03eb5039ade2bfc9345c4bf0504801312d00e010520048000ffff0704801312d0021084afb762a1fa52b917e868fd7d54496f010480007530030245c0c0000000ff04de1b0243e8f915dcf89db637350baa814ddae0b7543ca1f81e6ab200c00000009f81a17601000f08c0f6374a6effb37b0604801312d00408ffffffffffffffff, unknown_extensions: {}, .. }
+2025-11-10T14:44:59.255445Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=0}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:44:59.260219Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.260196Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.260302Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.262390Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. A
+2025-11-10T14:44:59.262466Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: euc1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.262465Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: use1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.262558Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.262658Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.262564Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.262705Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.262801Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: A, query_class: IN }]
+2025-11-10T14:44:59.262851Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.263015Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.262994Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.263088Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.263177Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.263144Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: euc1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.263229Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.263237Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.263384Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("use1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.263416Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.263471Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 47958:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+
+2025-11-10T14:44:59.263522Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.263566Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 38922:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.263577Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.263660Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 13027:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.263738Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 10447:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.263832Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 22820:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.263858Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.263932Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.263982Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.264130Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.264185Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=0}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:44:59.264247Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.264582Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.264643Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.265302Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), latency: 243.058083ms, addr: 120.229.3.214:23622 }
+2025-11-10T14:44:59.265886Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: d83693732556a3fb09c9bf333fa9d1131767c0000000ff04de1b0243e800145b2cd0dbc95bcc799e7df83c72e9d55da2b5e4050604801312d00408ffffffffffffffff0e0105c00000009f81a1760100030245c00f08e611bcef2231f94720048000ffff6ab2000704801312d00504801312d00210c49772b725c7d3d2a6d7ce0b6eab82a7010480007530, unknown_extensions: {}, .. }
+2025-11-10T14:44:59.266002Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:44:59.273947Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:44:59.274561Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), latency: 234.645917ms, addr: 120.229.3.214:23622 }
+2025-11-10T14:44:59.299600Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer::dns_handle: querying: aps1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.299720Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.299828Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.299881Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("aps1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.300064Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 56323:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.300274Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.302460Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_client_stream: received message id: 4650
+2025-11-10T14:44:59.302600Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 4650:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 5.223.60.113
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.302739Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 4650:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 5.223.60.113
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.303061Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=5.223.60.113:7842 relay_addr=[fd15:70a:510b:1::3]:12345
+2025-11-10T14:44:59.303387Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.303433Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.305250Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 24976
+2025-11-10T14:44:59.305279Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 47958
+2025-11-10T14:44:59.305356Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_client_stream: received message id: 13383
+2025-11-10T14:44:59.305323Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 24976:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 5.223.60.113
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305362Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 47958:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 5.223.60.113
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305441Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 24976:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 5.223.60.113
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305435Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 13383:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:2f0:2403::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305478Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 47958:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN A
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN A 5.223.60.113
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305582Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 13383:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:2f0:2403::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305769Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 13027
+2025-11-10T14:44:59.305776Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 14254
+2025-11-10T14:44:59.305839Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:2f0:2403::1]:7842 relay_addr=[fd15:70a:510b:1::4]:12345
+2025-11-10T14:44:59.305832Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 13027:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:2f0:2403::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305845Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 14254:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:2f0:2403::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305937Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 13027:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:2f0:2403::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.305949Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 14254:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; aps1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+aps1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:2f0:2403::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.306001Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.306045Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.306615Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_client_stream: received message id: 26581
+2025-11-10T14:44:59.306679Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 26581:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.306780Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 26581:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.306982Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:f0:febe::1]:7842 relay_addr=[fd15:70a:510b:1::5]:12345
+2025-11-10T14:44:59.307399Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.307489Z  WARN ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: iroh_quinn_udp: sendmsg error: Os { code: 65, kind: HostUnreachable, message: "No route to host" }, Transmit: { destination: [2a01:4ff:2f0:2403::1]:7842, src_ip: None, ecn: Some(Ect0), len: 1200, segment_size: None }
+2025-11-10T14:44:59.307514Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://aps1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.307505Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://aps1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.307597Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_proto::udp::udp_client_stream: received message id: 37412
+2025-11-10T14:44:59.307537Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.307641Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 5.223.60.113:443
+2025-11-10T14:44:59.307653Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 5.223.60.113:443
+2025-11-10T14:44:59.307676Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_proto::error: response: ; header 37412:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.307755Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 52963
+2025-11-10T14:44:59.307755Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 10447
+2025-11-10T14:44:59.307787Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hickory_proto::error: response: ; header 37412:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.307950Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 52963:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.308013Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 10447:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.308101Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 52963:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.308120Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 10447:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; use1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+use1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4ff:f0:febe::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.308486Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://use1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.308567Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 178.156.197.190:443
+2025-11-10T14:44:59.308615Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://use1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.308630Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: reqwest::connect: starting new connection: http://use1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.308769Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 178.156.197.190:443
+2025-11-10T14:44:59.308770Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hyper_util::client::legacy::connect::http: connecting to 178.156.197.190:80
+2025-11-10T14:44:59.311056Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 5.223.60.113:443
+2025-11-10T14:44:59.311168Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.311210Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.312154Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 178.156.197.190:443
+2025-11-10T14:44:59.312202Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 5.223.60.113:443
+2025-11-10T14:44:59.312210Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.312240Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 178.156.197.190:443
+2025-11-10T14:44:59.312271Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.312288Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.312316Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.312326Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.312368Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.312844Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hyper_util::client::legacy::connect::http: connected to 178.156.197.190:80
+2025-11-10T14:44:59.322655Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer::dns_handle: querying: euc1-1.relay.n0.iroh-canary.iroh.link. AAAA
+2025-11-10T14:44:59.322737Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server_pool: sending request: [Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.322841Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_resolver::name_server::name_server: existing connection: NameServerConfig { socket_addr: 192.168.6.1:53, protocol: Udp, tls_dns_name: None, http_endpoint: None, trust_negative_responses: false, bind_addr: None }
+2025-11-10T14:44:59.322893Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::xfer: enqueueing message:QUERY:[Query { name: Name("euc1-1.relay.n0.iroh-canary.iroh.link."), query_type: AAAA, query_class: IN }]
+2025-11-10T14:44:59.323045Z DEBUG hickory_proto::udp::udp_client_stream: final message: ; header 43243:QUERY:RD:NoError:QUERY:0/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+
+2025-11-10T14:44:59.323199Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_stream: created socket successfully
+2025-11-10T14:44:59.325207Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::udp::udp_client_stream: received message id: 31253
+2025-11-10T14:44:59.325284Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 31253:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4f8:1c1a:d408::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.325399Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: hickory_proto::error: response: ; header 31253:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4f8:1c1a:d408::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.325653Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4f8:1c1a:d408::1]:7842 relay_addr=[fd15:70a:510b:1::6]:12345
+2025-11-10T14:44:59.325885Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("euc1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.325925Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.327567Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 25724
+2025-11-10T14:44:59.327610Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::udp::udp_client_stream: received message id: 38922
+2025-11-10T14:44:59.327647Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 25724:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4f8:1c1a:d408::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.327676Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 38922:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4f8:1c1a:d408::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.327750Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 25724:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4f8:1c1a:d408::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.327782Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hickory_proto::error: response: ; header 38922:RESPONSE:RD,RA:NoError:QUERY:1/0/0
+; query
+;; euc1-1.relay.n0.iroh-canary.iroh.link. IN AAAA
+; answers 1
+euc1-1.relay.n0.iroh-canary.iroh.link. 3600 IN AAAA 2a01:4f8:1c1a:d408::1
+; nameservers 0
+; additionals 0
+
+2025-11-10T14:44:59.328187Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://euc1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.328187Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://euc1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.328265Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 162.55.211.167:443
+2025-11-10T14:44:59.328272Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 162.55.211.167:443
+2025-11-10T14:44:59.332690Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 162.55.211.167:443
+2025-11-10T14:44:59.332753Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("euc1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.332813Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.333725Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 162.55.211.167:443
+2025-11-10T14:44:59.333785Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("euc1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.333824Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.361291Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.361315Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.361376Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: iroh::net_report::reportgen: starting probe
+2025-11-10T14:44:59.363867Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://euc1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.363867Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://use1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.364091Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 162.55.211.167:443
+2025-11-10T14:44:59.364091Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 178.156.197.190:443
+2025-11-10T14:44:59.364589Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: reqwest::connect: starting new connection: https://aps1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:44:59.364823Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connecting to 5.223.60.113:443
+2025-11-10T14:44:59.367992Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 162.55.211.167:443
+2025-11-10T14:44:59.368121Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("euc1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.368177Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.369482Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 5.223.60.113:443
+2025-11-10T14:44:59.369534Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::connect::http: connected to 178.156.197.190:443
+2025-11-10T14:44:59.369571Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.369630Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.369626Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:44:59.369699Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Not resuming any session
+2025-11-10T14:44:59.370019Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.370099Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.371536Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 0604801312d00210b9663a89b5b03dc4619368815b48886d0f08801543297ac0de2c20048000ffff6ab2000e01050504801312d00704801312d0030245c0001478df9e3322d87ab2d020aef1a5ca65df1e9aa270c00000009f81a17601000408ffffffffffffffffc0000000ff04de1b0243e8010480007530c8bf5d5d6f84d86d0f1702ee119dec8a2220b9e4b4025164, unknown_extensions: {}, .. }
+2025-11-10T14:44:59.371648Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:44:59.379655Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:44:59.380425Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), latency: 64.727ms, addr: 120.229.3.214:23623 }
+2025-11-10T14:44:59.545638Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.545859Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.547128Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.547247Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.596710Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.597000Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.599804Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.600056Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.741732Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.741918Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.743183Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.743305Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.753001Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", aps1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:44:59.753372Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:44:59.768766Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.768904Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.770431Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.770529Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.779120Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.779181Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.780291Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.780341Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.790686Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.790733Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.791640Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.791713Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.800752Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.800796Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.801699Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.801739Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.807842Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.807889Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.807902Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", aps1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:44:59.808166Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:44:59.808666Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.808704Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:44:59.810284Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: hyper_util::client::legacy::pool: pooling idle connection for ("http", use1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:44:59.810429Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:captive-portal: iroh::net_report::reportgen: check_captive_portal url=http://use1-1.relay.n0.iroh-canary.iroh.link./generate_204 status_code=204 No Content valid_response=true
+2025-11-10T14:44:59.855551Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:44:59.855601Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: Not resuming
+2025-11-10T14:44:59.856615Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:44:59.856665Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:45:00.011200Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", aps1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:45:00.011606Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:45:00.180384Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", euc1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:45:00.180924Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:45:00.224023Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", use1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:45:00.224771Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:45:00.230333Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", euc1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:45:00.230882Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:45:00.266447Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=300ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", use1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:45:00.266447Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=200ms relay_node=RelayNode { url: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", euc1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:45:00.267177Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:45:00.276850Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:45:00.364871Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor:run-probe{proto=Https delay=400ms relay_node=RelayNode { url: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), quic: Some(RelayQuicConfig { port: 7842 }) }}: hyper_util::client::legacy::pool: pooling idle connection for ("https", use1-1.relay.n0.iroh-canary.iroh.link.)
+2025-11-10T14:45:00.365629Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: all regular probes done
+2025-11-10T14:45:00.365649Z DEBUG rustls::common_state: Sending warning alert CloseNotify
+2025-11-10T14:45:00.365788Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportgen actor finished
+2025-11-10T14:45:01.960292Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:45:01.960518Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: enough probes: 3
+2025-11-10T14:45:01.960602Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=None self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23622
+2025-11-10T14:45:01.960665Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=Some(120.229.3.214:23622) self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23622
+2025-11-10T14:45:01.960709Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=Some(120.229.3.214:23622) self.mapping_varies_by_dest_ipv4=Some(false) ipp=120.229.3.214:23623
+2025-11-10T14:45:01.960751Z  WARN ep{me=03e4a90ed1}:actor: iroh::net_report::report: IPv4 address detected by QAD varies by destination
+2025-11-10T14:45:01.961026Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: Have enough probe reports, aborting further probes soon reports=4 delay=446.183792ms
+2025-11-10T14:45:01.961346Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: generated report in 3003ms report=Report { udp_v4: true, udp_v6: false, mapping_varies_by_dest_ipv4: Some(true), mapping_varies_by_dest_ipv6: None, preferred_relay: Some(RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")), relay_latency: RelayLatencies { ipv4: {RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"): 64.727ms, RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"): 234.645917ms, RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"): 243.058083ms}, ipv6: {}, https: {RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"): 443.605ms, RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"): 852.651042ms, RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"): 916.060167ms} }, global_v4: Some(120.229.3.214:23622), global_v6: None, captive_portal: Some(false) }
+2025-11-10T14:45:01.961517Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: direct addr update done (Periodic)
+2025-11-10T14:45:01.961957Z DEBUG ep{me=03e4a90ed1}:actor: iroh::_events::direct_addrs: addrs={DirectAddr { addr: 10.144.247.119:49655, typ: Local }, DirectAddr { addr: 120.229.3.214:23622, typ: Qad }, DirectAddr { addr: 120.229.3.214:49656, typ: Qad4LocalPort }, DirectAddr { addr: 192.168.1.2:46037, typ: Portmapped }, DirectAddr { addr: 192.168.6.166:49655, typ: Local }, DirectAddr { addr: 192.168.139.3:49655, typ: Local }, DirectAddr { addr: 192.168.215.0:49655, typ: Local }}
+2025-11-10T14:45:01.962134Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: scheduling periodic_stun to run in 20s
+2025-11-10T14:45:01.962287Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: starting direct addr update (PortmapUpdated)
+2025-11-10T14:45:01.962351Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: requesting net_report report
+2025-11-10T14:45:01.962452Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: net_report starting do_full=false
+2025-11-10T14:45:01.962458Z  INFO ep{me=03e4a90ed1}:relay-actor: iroh::magicsock::transports::relay::actor: home is now relay https://aps1-1.relay.n0.iroh-canary.iroh.link./, was None
+2025-11-10T14:45:01.962544Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: spawning QAD probes
+2025-11-10T14:45:01.962566Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportstate actor starting
+2025-11-10T14:45:01.962587Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:01.962608Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: local interface details if_state=IfStateDetails { have_v4: true, have_v6: true }
+2025-11-10T14:45:01.962645Z DEBUG ep{me=03e4a90ed1}:relay-actor: iroh::magicsock::transports::relay::actor: Adding relay connection url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:01.962664Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:01.962685Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportgen actor finished
+2025-11-10T14:45:01.962728Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:01.962786Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:01.962813Z DEBUG ep{me=03e4a90ed1}:relay-actor: iroh::magicsock::transports::relay::actor: 0 active relay conns
+2025-11-10T14:45:01.962841Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:01.962888Z DEBUG ep{me=03e4a90ed1}:relay-actor: iroh::magicsock::transports::relay::actor: 1 active relay conns: relay-https://aps1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:45:01.962904Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:01.963053Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh::magicsock::transports::relay::actor: Actor loop: connecting to relay.
+2025-11-10T14:45:01.963120Z  INFO riterm_shared::quic_server: ✅ Endpoint is online!
+2025-11-10T14:45:01.963239Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client: Dialing relay by websocket dial_url=wss://aps1-1.relay.n0.iroh-canary.iroh.link./relay
+2025-11-10T14:45:01.963664Z  INFO cli::message_server: All message handlers registered successfully
+2025-11-10T14:45:01.963895Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:f0:febe::1]:7842 relay_addr=[fd15:70a:510b:1::5]:12345
+2025-11-10T14:45:01.963469Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client::tls: dial url self.url=wss://aps1-1.relay.n0.iroh-canary.iroh.link./relay
+2025-11-10T14:45:01.964235Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:01.964266Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=162.55.211.167:7842 relay_addr=[fd15:70a:510b:1::2]:12345
+2025-11-10T14:45:01.963880Z  INFO cli::message_server: 🎫 Generating ticket for node: PublicKey(03e4a90ed1ca90a58de6442419e707ff2c59aa55faeec5f2e621470ab55e1ee0)
+2025-11-10T14:45:01.964428Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client::tls: connecting to 5.223.60.113:443
+2025-11-10T14:45:01.964458Z  INFO cli::message_server: 🎫 Relay URL: Some(RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"))
+2025-11-10T14:45:01.964711Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=5.223.60.113:7842 relay_addr=[fd15:70a:510b:1::3]:12345
+2025-11-10T14:45:01.964720Z  INFO cli::message_server: 🎫 Direct addresses: {10.144.247.119:49655, 120.229.3.214:23622, 120.229.3.214:49656, 192.168.1.2:46037, 192.168.6.166:49655, 192.168.139.3:49655, 192.168.215.0:49655}
+2025-11-10T14:45:01.965250Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:2f0:2403::1]:7842 relay_addr=[fd15:70a:510b:1::4]:12345
+2025-11-10T14:45:01.965411Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh::_events::relay::home_changed: url=https://aps1-1.relay.n0.iroh-canary.iroh.link./ home_relay=true
+2025-11-10T14:45:01.965660Z  INFO cli::message_server: ✅ Connection ticket generated successfully
+2025-11-10T14:45:01.965711Z  INFO cli::message_server: 🎫 NodeId: PublicKey(03e4a90ed1ca90a58de6442419e707ff2c59aa55faeec5f2e621470ab55e1ee0)
+2025-11-10T14:45:01.965732Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4f8:1c1a:d408::1]:7842 relay_addr=[fd15:70a:510b:1::6]:12345
+2025-11-10T14:45:01.965805Z  INFO cli::message_server: 🎫 ALPN: com.riterm.messages/1
+2025-11-10T14:45:01.965915Z  INFO cli::message_server: 🎫 Ticket preview: ticket:PMRGC3DQNYRDUITSNF2GK4TNL5YXK2LDEIWCEY3SMVQ...
+2025-11-10T14:45:01.966719Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("euc1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:01.966826Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:01.967281Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=178.156.197.190:7842 relay_addr=[fd15:70a:510b:1::1]:12345
+2025-11-10T14:45:01.968829Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:01.968930Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:01.969835Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client::tls: TCP stream connected server_addr=Ok(5.223.60.113:443) local_addr=192.168.6.166:59522
+2025-11-10T14:45:01.969911Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client::tls: Starting TLS handshake
+2025-11-10T14:45:01.969969Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:01.970018Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:01.970362Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("euc1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:01.970416Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:01.971809Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:01.971861Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:01.973316Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:02.036725Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=8}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:02.036887Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=8}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:02.038294Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=8}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 010480007530c00000009f81a176010002102972dd3119889aecb3fcfb5e47c76c270704801312d00014f4e22b9369c7c449431d232b673f0826dbd9ebd76ab200030245c00504801312d0e5a8486da80dd2d90523582056c40e0105c0000000ff04de1b0243e820048000ffff0408ffffffffffffffff0604801312d00f0841fa42565afc409f, unknown_extensions: {}, .. }
+2025-11-10T14:45:02.038528Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=8}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:02.044727Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=8}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:02.045408Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), latency: 63.049834ms, addr: 120.229.3.214:23623 }
+2025-11-10T14:45:02.201295Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:02.201492Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:02.203161Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 00140a15860edf30953977f8a220258af52a7a43242fc00000009f81a17601000f0825c0b5baee0ace3cc0000000ff04de1b0243e820048000ffff0704801312d0030245c00604801312d00104800075306ab200e33b2e6ee6396f910d2aed5e6e7f99f36ced33c260ad02105ef67a84a2c4489cb1c4459c1334b68c0e01050504801312d00408ffffffffffffffff, unknown_extensions: {}, .. }
+2025-11-10T14:45:02.203367Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:02.211296Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:02.211470Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::tls13: Resuming using PSK
+2025-11-10T14:45:02.213646Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 00143a84c4f7a496fc3043df25c29d3cf92e41f687890f08670630cce50e19fa20048000ffffce61995cf27fb0700230160408ffffffffffffffff0e01050210172a81cef271cca2d736c7cd42b1970d0504801312d00704801312d06ab200c0000000ff04de1b0243e8010480007530c00000009f81a17601000604801312d0030245c0, unknown_extensions: {}, .. }
+2025-11-10T14:45:02.213955Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:02.215160Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:02.216887Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), latency: 236.109917ms, addr: 120.229.3.214:23622 }
+2025-11-10T14:45:02.829057Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:03.223738Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:03.224177Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: rustls::client::tls13: Not resuming
+2025-11-10T14:45:03.225694Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), unknown_extensions: {}, .. }
+2025-11-10T14:45:03.226146Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: rustls::client::hs: ALPN protocol is None
+2025-11-10T14:45:03.233956Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client::tls: tls_connector connect success
+2025-11-10T14:45:03.234662Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client: Using TLS key export for relay client authentication
+2025-11-10T14:45:03.442781Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client::conn: server_handshake: started
+2025-11-10T14:45:03.443024Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: iroh_relay::client::conn: server_handshake: done
+2025-11-10T14:45:03.443073Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:dialing: events.net.relay.connected: url=https://aps1-1.relay.n0.iroh-canary.iroh.link./
+2025-11-10T14:45:03.443265Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh::magicsock::transports::relay::actor: Actor loop: connected to relay
+2025-11-10T14:45:03.443311Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh::_events::relay::connected: url=https://aps1-1.relay.n0.iroh-canary.iroh.link./ home_relay=true
+2025-11-10T14:45:03.444528Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Sending ping to relay server. data=[63, 194, 231, 133, 188, 112, 148, 179]
+2025-11-10T14:45:03.633013Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), latency: 239.868723ms, addr: 120.229.3.214:23622 }
+2025-11-10T14:45:03.692230Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Pong received from relay server data=[63, 194, 231, 133, 188, 112, 148, 179]
+2025-11-10T14:45:04.964751Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:45:04.964970Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: enough probes: 3
+2025-11-10T14:45:04.965039Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=None self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23623
+2025-11-10T14:45:04.965094Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=Some(120.229.3.214:23623) self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23622
+2025-11-10T14:45:04.965132Z  WARN ep{me=03e4a90ed1}:actor: iroh::net_report::report: IPv4 address detected by QAD varies by destination
+2025-11-10T14:45:04.965247Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=Some(120.229.3.214:23623) self.mapping_varies_by_dest_ipv4=Some(true) ipp=120.229.3.214:23622
+2025-11-10T14:45:04.965289Z  WARN ep{me=03e4a90ed1}:actor: iroh::net_report::report: IPv4 address detected by QAD varies by destination
+2025-11-10T14:45:04.965491Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: generated report in 3003ms report=Report { udp_v4: true, udp_v6: false, mapping_varies_by_dest_ipv4: Some(true), mapping_varies_by_dest_ipv6: None, preferred_relay: Some(RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")), relay_latency: RelayLatencies { ipv4: {RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"): 63.049834ms, RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"): 239.868723ms, RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"): 236.109917ms}, ipv6: {}, https: {} }, global_v4: Some(120.229.3.214:23623), global_v6: None, captive_portal: None }
+2025-11-10T14:45:04.965657Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: direct addr update done (PortmapUpdated)
+2025-11-10T14:45:04.966123Z DEBUG ep{me=03e4a90ed1}:actor: iroh::_events::direct_addrs: addrs={DirectAddr { addr: 10.144.247.119:49655, typ: Local }, DirectAddr { addr: 120.229.3.214:23623, typ: Qad }, DirectAddr { addr: 120.229.3.214:49656, typ: Qad4LocalPort }, DirectAddr { addr: 192.168.1.2:46037, typ: Portmapped }, DirectAddr { addr: 192.168.6.166:49655, typ: Local }, DirectAddr { addr: 192.168.139.3:49655, typ: Local }, DirectAddr { addr: 192.168.215.0:49655, typ: Local }}
+2025-11-10T14:45:04.966322Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: scheduling periodic_stun to run in 24s
+2025-11-10T14:45:12.805247Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: InvalidAddress { backtrace: None }
+2025-11-10T14:45:12.805382Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: MessageTooShort { backtrace: None }
+2025-11-10T14:45:18.693456Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Sending ping to relay server. data=[213, 127, 144, 99, 150, 181, 100, 167]
+2025-11-10T14:45:18.901250Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Pong received from relay server data=[213, 127, 144, 99, 150, 181, 100, 167]
+2025-11-10T14:45:29.782432Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: starting direct addr update (Periodic)
+2025-11-10T14:45:29.782613Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: requesting net_report report
+2025-11-10T14:45:29.782773Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: net_report starting do_full=false
+2025-11-10T14:45:29.782886Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: spawning QAD probes
+2025-11-10T14:45:29.782935Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:29.783032Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:29.783049Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportstate actor starting
+2025-11-10T14:45:29.783110Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:29.783207Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:29.783105Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: local interface details if_state=IfStateDetails { have_v4: true, have_v6: true }
+2025-11-10T14:45:29.783269Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:29.783430Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:29.783360Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportgen actor finished
+2025-11-10T14:45:29.783731Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:2f0:2403::1]:7842 relay_addr=[fd15:70a:510b:1::4]:12345
+2025-11-10T14:45:29.783740Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=5.223.60.113:7842 relay_addr=[fd15:70a:510b:1::3]:12345
+2025-11-10T14:45:29.784015Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:29.784068Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:29.785020Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=178.156.197.190:7842 relay_addr=[fd15:70a:510b:1::1]:12345
+2025-11-10T14:45:29.785022Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:f0:febe::1]:7842 relay_addr=[fd15:70a:510b:1::5]:12345
+2025-11-10T14:45:29.785198Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4f8:1c1a:d408::1]:7842 relay_addr=[fd15:70a:510b:1::6]:12345
+2025-11-10T14:45:29.785287Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=162.55.211.167:7842 relay_addr=[fd15:70a:510b:1::2]:12345
+2025-11-10T14:45:29.785718Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:29.785797Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:29.787163Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:29.787233Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:29.788670Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:29.788751Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:29.790040Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:29.791522Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:30.056170Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: iroh_quinn_proto::connection::packet_crypto: discarding unexpected Handshake packet (270 bytes)
+2025-11-10T14:45:30.056395Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: iroh_quinn_proto::connection::packet_crypto: discarding unexpected Data packet (161 bytes)
+2025-11-10T14:45:30.056632Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=6}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:30.056742Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=6}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:30.058527Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=6}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 010480007530c0000000ff04de1b0243e80210c5c09839e912e3c81f2b695b648694a30014b61cf5683d0bfab7699f0bfbd03936399fe4b1880604801312d00408ffffffffffffffff20048000ffff0504801312d06ab2000704801312d00f08f0e8949169a1e596030245c00e0105dacefcfea2c686240577ff17e5f6c00000009f81a1760100, unknown_extensions: {}, .. }
+2025-11-10T14:45:30.058809Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=6}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:30.067523Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=6}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:30.068842Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"), latency: 267.644042ms, addr: 120.229.3.214:23622 }
+2025-11-10T14:45:30.861909Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:30.862077Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:30.925755Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: fd27dbc5d0a32e140f87837c83c96b96b3e1b9049c64deb802108182743aadedcdc0fa4872a020d96f6c0e0105c0000000ff04de1b0243e80104800075300408ffffffffffffffff20048000ffff0604801312d06ab200030245c00704801312d000140f779fab12ad4286a895a4eb6ecbf42763436acbc00000009f81a17601000504801312d00f0891acecf60bc2a3e6, unknown_extensions: {}, .. }
+2025-11-10T14:45:30.926112Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:30.997187Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:31.027410Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:31.027534Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:31.147644Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), latency: 62.240434ms, addr: 120.229.3.214:23623 }
+2025-11-10T14:45:31.262993Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: cea00df703ed87ef04bd727c25c0000000ff04de1b0243e80210d0a42efba9f00bd4d2b44ffb5ff1eb170f0867db484482c80bc90014637d8dea514b14a826bf80c79bc85cbe1c9c41540e01056ab2000104800075300704801312d00504801312d0c00000009f81a1760100030245c00408ffffffffffffffff20048000ffff0604801312d0, unknown_extensions: {}, .. }
+2025-11-10T14:45:31.263204Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:32.118048Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:32.784700Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:45:32.784814Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v4 timed out
+2025-11-10T14:45:32.784851Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:45:32.784882Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:45:32.784918Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=None self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23622
+2025-11-10T14:45:32.784953Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=Some(120.229.3.214:23622) self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23623
+2025-11-10T14:45:32.784978Z  WARN ep{me=03e4a90ed1}:actor: iroh::net_report::report: IPv4 address detected by QAD varies by destination
+2025-11-10T14:45:32.785098Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: generated report in 3002ms report=Report { udp_v4: true, udp_v6: false, mapping_varies_by_dest_ipv4: Some(true), mapping_varies_by_dest_ipv6: None, preferred_relay: Some(RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")), relay_latency: RelayLatencies { ipv4: {RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"): 62.240434ms, RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./"): 267.644042ms}, ipv6: {}, https: {} }, global_v4: Some(120.229.3.214:23622), global_v6: None, captive_portal: None }
+2025-11-10T14:45:32.785174Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: direct addr update done (Periodic)
+2025-11-10T14:45:32.785425Z DEBUG ep{me=03e4a90ed1}:actor: iroh::_events::direct_addrs: addrs={DirectAddr { addr: 10.144.247.119:49655, typ: Local }, DirectAddr { addr: 120.229.3.214:23622, typ: Qad }, DirectAddr { addr: 120.229.3.214:49656, typ: Qad4LocalPort }, DirectAddr { addr: 192.168.1.2:46037, typ: Portmapped }, DirectAddr { addr: 192.168.6.166:49655, typ: Local }, DirectAddr { addr: 192.168.139.3:49655, typ: Local }, DirectAddr { addr: 192.168.215.0:49655, typ: Local }}
+2025-11-10T14:45:32.785530Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: scheduling periodic_stun to run in 24s
+2025-11-10T14:45:33.902375Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Sending ping to relay server. data=[103, 97, 194, 129, 239, 97, 139, 185]
+2025-11-10T14:45:34.113976Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Pong received from relay server data=[103, 97, 194, 129, 239, 97, 139, 185]
+2025-11-10T14:45:43.136563Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: InvalidAddress { backtrace: None }
+2025-11-10T14:45:43.136942Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: MessageTooShort { backtrace: None }
+2025-11-10T14:45:43.905353Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: InvalidAddress { backtrace: None }
+2025-11-10T14:45:43.905578Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: MessageTooShort { backtrace: None }
+2025-11-10T14:45:49.115951Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Sending ping to relay server. data=[87, 179, 46, 188, 74, 170, 189, 185]
+2025-11-10T14:45:49.316060Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Pong received from relay server data=[87, 179, 46, 188, 74, 170, 189, 185]
+2025-11-10T14:45:57.750529Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: starting direct addr update (Periodic)
+2025-11-10T14:45:57.750689Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: requesting net_report report
+2025-11-10T14:45:57.750820Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: net_report starting do_full=false
+2025-11-10T14:45:57.750910Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: spawning QAD probes
+2025-11-10T14:45:57.750950Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:57.751026Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:57.751060Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportstate actor starting
+2025-11-10T14:45:57.751094Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:57.751121Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: local interface details if_state=IfStateDetails { have_v4: true, have_v6: true }
+2025-11-10T14:45:57.751207Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:57.751227Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportgen actor finished
+2025-11-10T14:45:57.751287Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:57.751352Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:45:57.752654Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=5.223.60.113:7842 relay_addr=[fd15:70a:510b:1::3]:12345
+2025-11-10T14:45:57.752666Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4f8:1c1a:d408::1]:7842 relay_addr=[fd15:70a:510b:1::6]:12345
+2025-11-10T14:45:57.752672Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=178.156.197.190:7842 relay_addr=[fd15:70a:510b:1::1]:12345
+2025-11-10T14:45:57.752654Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=162.55.211.167:7842 relay_addr=[fd15:70a:510b:1::2]:12345
+2025-11-10T14:45:57.752848Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:f0:febe::1]:7842 relay_addr=[fd15:70a:510b:1::5]:12345
+2025-11-10T14:45:57.752862Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:57.752861Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:2f0:2403::1]:7842 relay_addr=[fd15:70a:510b:1::4]:12345
+2025-11-10T14:45:57.754209Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:57.755356Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:57.755400Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:57.756497Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:57.757672Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:45:57.757728Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:45:57.758878Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:45:57.826077Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:57.826331Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:57.827932Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 0604801312d020048000ffffc0000000ff04de1b0243e8021001066f3f29b8345d01cdfaf9512033300408ffffffffffffffff030245c00f0880139e9df0094777c00000009f81a17601006ab2000704801312d00104800075300504801312d00e0105cfe0598cda5e92f5000014a49509d7aef73129d2c3511e25ab90315acc3f60, unknown_extensions: {}, .. }
+2025-11-10T14:45:57.828074Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:57.836142Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=3}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:57.837178Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), latency: 71.445209ms, addr: 120.229.3.214:23623 }
+2025-11-10T14:45:58.011379Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:58.011657Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:58.013240Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: c0000000ff04de1b0243e80504801312d00408ffffffffffffffff0704801312d0c00000009f81a1760100f12ed49e27cabb820ba7704779db98270f9b26d020048000ffff0f081c29260fd3b3e1a5010480007530021023fdbf3dfb7fdceee9c002c391ea0f6a6ab200030245c0001495833af721a96686faaaad0b37b40199d7607da30604801312d00e0105, unknown_extensions: {}, .. }
+2025-11-10T14:45:58.013512Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:45:58.021863Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=9}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:45:58.927187Z DEBUG riterm_shared::event_manager: Message processing loop alive for node: riterm_cli_host
+2025-11-10T14:45:59.220993Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), latency: 253.12425ms, addr: 120.229.3.214:23622 }
+2025-11-10T14:45:59.258177Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:45:59.258364Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::tls13: Not resuming
+2025-11-10T14:45:59.875446Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: 0604801312d0c0000000ff04de1b0243e800140557bd397953072d285ff536898f18e51bec71a020048000ffff0408ffffffffffffffff0210143e781aadde0f12831b9dc3da14f8890f080588e8d90c278ae8c00000009f81a17601000e0105d14c0ec587a8316108bf428d556420c94e0104800075300704801312d00504801312d06ab200030245c0, unknown_extensions: {}, .. }
+2025-11-10T14:45:59.875729Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:46:00.091916Z  WARN ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: iroh_quinn_udp: sendmsg error: Os { code: 65, kind: HostUnreachable, message: "No route to host" }, Transmit: { destination: [2a01:4f8:1c1a:d408::1]:7842, src_ip: None, ecn: Some(Ect0), len: 1200, segment_size: None }
+2025-11-10T14:46:00.752598Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v4 timed out
+2025-11-10T14:46:00.752832Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:46:00.752885Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:46:00.752935Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:46:00.753002Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=None self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23623
+2025-11-10T14:46:00.753064Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=Some(120.229.3.214:23623) self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23622
+2025-11-10T14:46:00.753109Z  WARN ep{me=03e4a90ed1}:actor: iroh::net_report::report: IPv4 address detected by QAD varies by destination
+2025-11-10T14:46:00.753340Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: generated report in 3002ms report=Report { udp_v4: true, udp_v6: false, mapping_varies_by_dest_ipv4: Some(true), mapping_varies_by_dest_ipv6: None, preferred_relay: Some(RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")), relay_latency: RelayLatencies { ipv4: {RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"): 71.445209ms, RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"): 253.12425ms}, ipv6: {}, https: {} }, global_v4: Some(120.229.3.214:23623), global_v6: None, captive_portal: None }
+2025-11-10T14:46:00.753462Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: direct addr update done (Periodic)
+2025-11-10T14:46:00.753946Z DEBUG ep{me=03e4a90ed1}:actor: iroh::_events::direct_addrs: addrs={DirectAddr { addr: 10.144.247.119:49655, typ: Local }, DirectAddr { addr: 120.229.3.214:23623, typ: Qad }, DirectAddr { addr: 120.229.3.214:49656, typ: Qad4LocalPort }, DirectAddr { addr: 192.168.1.2:46037, typ: Portmapped }, DirectAddr { addr: 192.168.6.166:49655, typ: Local }, DirectAddr { addr: 192.168.139.3:49655, typ: Local }, DirectAddr { addr: 192.168.215.0:49655, typ: Local }}
+2025-11-10T14:46:00.754137Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: scheduling periodic_stun to run in 21s
+2025-11-10T14:46:04.318012Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Sending ping to relay server. data=[122, 146, 61, 89, 26, 209, 165, 35]
+2025-11-10T14:46:04.530227Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Pong received from relay server data=[122, 146, 61, 89, 26, 209, 165, 35]
+2025-11-10T14:46:13.504910Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: InvalidAddress { backtrace: None }
+2025-11-10T14:46:13.505087Z  WARN netwatch::netmon::bsd: AF_ROUTE: failed to parse rib: MessageTooShort { backtrace: None }
+2025-11-10T14:46:19.532584Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Sending ping to relay server. data=[131, 129, 174, 26, 84, 99, 7, 241]
+2025-11-10T14:46:19.737143Z DEBUG ep{me=03e4a90ed1}:relay-actor:active-relay{url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:connected: iroh_relay::ping_tracker: Pong received from relay server data=[131, 129, 174, 26, 84, 99, 7, 241]
+2025-11-10T14:46:22.145218Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: starting direct addr update (Periodic)
+2025-11-10T14:46:22.145530Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: requesting net_report report
+2025-11-10T14:46:22.145746Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: net_report starting do_full=false
+2025-11-10T14:46:22.145917Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: spawning QAD probes
+2025-11-10T14:46:22.145983Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:46:22.146134Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:46:22.146170Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportstate actor starting
+2025-11-10T14:46:22.146290Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:46:22.146286Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: local interface details if_state=IfStateDetails { have_v4: true, have_v6: true }
+2025-11-10T14:46:22.146431Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:46:22.146503Z DEBUG ep{me=03e4a90ed1}:actor:reportgen-actor: iroh::net_report::reportgen: reportgen actor finished
+2025-11-10T14:46:22.146558Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v4 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:46:22.146685Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: v6 QAD probe relay_node.url=RelayUrl("https://use1-1.relay.n0.iroh-canary.iroh.link./")
+2025-11-10T14:46:22.148597Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=162.55.211.167:7842 relay_addr=[fd15:70a:510b:1::2]:12345
+2025-11-10T14:46:22.148606Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:2f0:2403::1]:7842 relay_addr=[fd15:70a:510b:1::4]:12345
+2025-11-10T14:46:22.148719Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=5.223.60.113:7842 relay_addr=[fd15:70a:510b:1::3]:12345
+2025-11-10T14:46:22.148621Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v4 relay_addr_orig=178.156.197.190:7842 relay_addr=[fd15:70a:510b:1::1]:12345
+2025-11-10T14:46:22.148932Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4f8:1c1a:d408::1]:7842 relay_addr=[fd15:70a:510b:1::6]:12345
+2025-11-10T14:46:22.148980Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:46:22.149065Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: iroh::net_report: relay addr v6 relay_addr_orig=[2a01:4ff:f0:febe::1]:7842 relay_addr=[fd15:70a:510b:1::5]:12345
+2025-11-10T14:46:22.151349Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:46:22.151444Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:46:22.153527Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("aps1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:46:22.153761Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:46:22.155503Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:46:22.155638Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:46:22.157434Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Resuming session
+2025-11-10T14:46:22.159324Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: No cached session for DnsName("use1-1.relay.n0.iroh-canary.iroh.link.")
+2025-11-10T14:46:22.159410Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv6{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}: rustls::client::hs: Not resuming any session
+2025-11-10T14:46:22.220395Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:46:22.220579Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::tls13: Not resuming
+2025-11-10T14:46:22.221982Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: d0614690f2f4ed6206548f437b416002108cbeaf668e3b957cb0af4ce23ebed2ad0504801312d0030245c0c00000009f81a17601000704801312d020048000ffff0e01056ab2000408ffffffffffffffff0604801312d0c0000000ff04de1b0243e800141fc8353af26cc8b866e59e213ba6db2f4bebca4b0104800075300f0838b4b9f042a2f37b, unknown_extensions: {}, .. }
+2025-11-10T14:46:22.222173Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:46:22.222315Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: iroh_quinn_proto::connection::packet_crypto: discarding unexpected Data packet (161 bytes)
+2025-11-10T14:46:22.230705Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://aps1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=1}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:46:22.355763Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"), latency: 63.500498ms, addr: 120.229.3.214:23623 }
+2025-11-10T14:46:22.384008Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:46:22.384292Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::tls13: Not resuming
+2025-11-10T14:46:22.385649Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: c0000000ff04de1b0243e80504801312d0021091be6e3c6e34fab176d9f8ce886ab5300f08dfc07930a8096c590604801312d00014737765e5345e9fa725540d91d1c316c98076cbb60408ffffffffffffffffc00000009f81a1760100030245c020048000ffffd4d71b64eefb301c0eea3970267f17d47ab26d05c196960e01050704801312d06ab200010480007530, unknown_extensions: {}, .. }
+2025-11-10T14:46:22.385850Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:46:22.386006Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: iroh_quinn_proto::connection::packet_crypto: discarding unexpected Data packet (161 bytes)
+2025-11-10T14:46:22.600121Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: iroh_quinn_proto::connection::packet_crypto: discarding unexpected Handshake packet (1200 bytes)
+2025-11-10T14:46:22.600446Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: iroh_quinn_proto::connection::packet_crypto: discarding unexpected Handshake packet (282 bytes)
+2025-11-10T14:46:23.005419Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://euc1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=7}: iroh_quinn_proto::transport_parameters: address discovery enabled for peer role=SendOnly
+2025-11-10T14:46:23.483081Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: got v4 QAD conn r=QadProbeReport { node: RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"), latency: 235.795238ms, addr: 120.229.3.214:23622 }
+2025-11-10T14:46:23.608604Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::hs: Using ciphersuite TLS13_AES_256_GCM_SHA384
+2025-11-10T14:46:23.608844Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::tls13: Not resuming
+2025-11-10T14:46:24.069840Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::tls13: TLS1.3 encrypted extensions: ServerExtensions { server_name_ack: (), selected_protocol: SingleProtocolName(ProtocolName(2f69726f682d7161642f30)), transport_parameters: c0000000ff04de1b0243e80f08dc2708e34ea46790d984c14c0c1030cb0e6e322d3d9efd1d98f5580de865400e01050704801312d06ab2000210fdba2f41b908a5bb017f07bf8003eaf420048000ffff030245c0c00000009f81a17601000104800075300014b3397c57c14d6efa0a5b1b3b2ff572dc654976c60604801312d00504801312d00408ffffffffffffffff, unknown_extensions: {}, .. }
+2025-11-10T14:46:24.070460Z DEBUG ep{me=03e4a90ed1}:actor:QAD-IPv4{relay_url=https://use1-1.relay.n0.iroh-canary.iroh.link./}:drive{id=2}: rustls::client::hs: ALPN protocol is Some(b"/iroh-qad/0")
+2025-11-10T14:46:25.149229Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v4 timed out
+2025-11-10T14:46:25.149376Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:46:25.149475Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:46:25.149515Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: probe v6 timed out
+2025-11-10T14:46:25.149569Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=None self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23623
+2025-11-10T14:46:25.149625Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report::report: got self.global_v4=Some(120.229.3.214:23623) self.mapping_varies_by_dest_ipv4=None ipp=120.229.3.214:23622
+2025-11-10T14:46:25.149662Z  WARN ep{me=03e4a90ed1}:actor: iroh::net_report::report: IPv4 address detected by QAD varies by destination
+2025-11-10T14:46:25.149882Z DEBUG ep{me=03e4a90ed1}:actor: iroh::net_report: generated report in 3004ms report=Report { udp_v4: true, udp_v6: false, mapping_varies_by_dest_ipv4: Some(true), mapping_varies_by_dest_ipv6: None, preferred_relay: Some(RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./")), relay_latency: RelayLatencies { ipv4: {RelayUrl("https://aps1-1.relay.n0.iroh-canary.iroh.link./"): 63.500498ms, RelayUrl("https://euc1-1.relay.n0.iroh-canary.iroh.link./"): 235.795238ms}, ipv6: {}, https: {} }, global_v4: Some(120.229.3.214:23623), global_v6: None, captive_portal: None }
+2025-11-10T14:46:25.149992Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: direct addr update done (Periodic)
+2025-11-10T14:46:25.150451Z DEBUG ep{me=03e4a90ed1}:actor: iroh::magicsock: scheduling periodic_stun to run in 20s
+2025-11-10T14:46:28.482214Z  INFO cli: Received shutdown signal
+2025-11-10T14:46:28.482436Z  INFO cli::message_server: Shutting down CLI message server
+2025-11-10T14:46:28.482495Z  INFO riterm_shared::quic_server: Shutting down QUIC message server
+2025-11-10T14:46:28.482623Z  INFO riterm_shared::quic_server: Shutting down connection acceptor

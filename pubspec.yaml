@@ -37,6 +37,7 @@ dependencies:
   rust_lib_riterm:
     path: rust_builder
   flutter_rust_bridge: 2.11.1
+  xterm: ^4.0.0
 
 dev_dependencies:
   flutter_test:
