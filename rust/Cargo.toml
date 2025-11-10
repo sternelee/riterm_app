@@ -1,0 +1,45 @@
+[package]
+name = "rust_lib_riterm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+flutter_rust_bridge = "=2.11.1"
+# Core dependencies
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+rand = { workspace = true }
+url = "2.5"
+bincode = { workspace = true }
+chacha20poly1305 = { workspace = true }
+aead = { workspace = true }
+base64 = { workspace = true }
+hex = { workspace = true }
+regex = "1.10"
+# Shared dependencies
+riterm-shared = { path = "../shared" }
+# QUIC and networking
+iroh = { workspace = true }
+iroh-base = { workspace = true }
+# Async utilities
+tokio = { workspace = true }
+tokio-util = "0.7"
+# Error handling
+anyhow = { workspace = true }
+# Tracing
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+# Data encoding for ticket parsing
+data-encoding = "2.6"
+# Lazy static for global state
+lazy_static = "1.5"
+# Async trait
+async-trait = "0.1"
+futures = { workspace = true }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(frb_expand)'] }
