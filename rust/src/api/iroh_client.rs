@@ -123,8 +123,8 @@ pub struct StreamEvent {
 #[frb(init)]
 pub fn init_app() {
     flutter_rust_bridge::setup_default_user_utils();
-    // Initialize tracing if needed
-    tracing_subscriber::fmt::init();
+    // Initialize tracing only if not already set
+    let _ = tracing_subscriber::fmt().try_init();
 }
 
 #[frb(sync)]
