@@ -42,4 +42,5 @@ A new Flutter FFI plugin project.
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386',
     'OTHER_LDFLAGS' => '-force_load ${BUILT_PRODUCTS_DIR}/librust_lib_riterm.a',
   }
+  s.frameworks = ['SystemConfiguration', 'CoreFoundation', 'Security']
 end
