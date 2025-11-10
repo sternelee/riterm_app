@@ -55,8 +55,10 @@ cargo check -p rust_lib_riterm && flutter_rust_bridge_codegen generate
 # Flutter commands
 flutter pub get                    # Install Flutter dependencies
 flutter run                       # Run Flutter app (development)
+flutter run -d macos              # Run on macOS specifically
 flutter build apk                  # Build Android APK
 flutter build ios                  # Build iOS app
+flutter build macos                # Build macOS app
 flutter analyze                    # Analyze Dart code
 flutter test                       # Run Flutter tests
 
@@ -71,19 +73,27 @@ cargo clippy                      # Run Rust linter
 # CLI specific commands
 cargo run --bin cli -- host       # Start CLI host server
 cargo run --bin cli -- host --relay <url> --max-connections 100  # With custom options
+
+# Platform-specific troubleshooting
+flutter clean && flutter pub get && cd macos && pod install  # Fix iOS/macOS build issues
 ```
 
 ### Development Workflow
 
 **Required Build Order:**
 1. Check Rust library: `cargo check -p rust_lib_riterm`
-2. Generate Flutter bindings: `flutter_rust_bridge_codegen generate`
+2. Generate Flutter bindings: `flutter_rust_bridge_codegen generate -r crate::api -d lib/src/rust`
 3. Run Flutter app: `flutter run`
 
 **Important Notes:**
 - Flutter Rust Bridge code generation depends on the Rust library compiling successfully
 - The generated bindings file (`rust/src/frb_generated.rs`) is auto-injected into `rust/src/lib.rs`
 - Internal state management is separated into `rust/src/internal_state.rs` to avoid exposing implementation details to Flutter
+
+**Platform-Specific Issues:**
+- **macOS/iOS**: SystemConfiguration, CoreFoundation, and Security frameworks must be linked (configured in podspecs)
+- **Tracing**: Use `try_init()` instead of `init()` to avoid panic when logger already set
+- **CocoaPods**: Run `pod install` after framework changes, clean with `flutter clean && pod install` if issues persist
 
 **Testing:**
 - Run Rust tests: `cargo test`
@@ -135,6 +145,10 @@ cargo run --bin cli -- host --relay <url> --max-connections 100  # With custom o
 - `rust/src/frb_generated.rs`: Auto-generated Flutter Rust Bridge code
 - `lib/src/rust/`: Generated Dart bindings for the Flutter app
 
+**Platform Configuration Files:**
+- `rust_builder/ios/rust_lib_riterm.podspec`: iOS CocoaPods configuration with system frameworks
+- `rust_builder/macos/rust_lib_riterm.podspec`: macOS CocoaPods configuration with system frameworks
+
 ## Important Development Notes
 
 ### Flutter Rust Bridge Gotchas
@@ -152,6 +166,18 @@ cargo run --bin cli -- host --relay <url> --max-connections 100  # With custom o
 **Module Dependencies:**
 - `internal_state.rs` can import from the API module but not vice versa for public types
 - Keep circular dependencies in mind when separating public API from internal state
+
+### Critical Platform Requirements
+
+**macOS/iOS Development:**
+- System frameworks must be properly linked via podspec files
+- Required frameworks: SystemConfiguration, CoreFoundation, Security
+- Always run `pod install` after modifying podspec files
+- Use CocoaPods cleaning when encountering linking issues
+
+**Logging and Tracing:**
+- Always use `try_init()` for tracing subscriber to avoid panic on multiple initialization
+- The app may restart multiple times during development, causing logger conflicts
 
 ## Build Targets
 
